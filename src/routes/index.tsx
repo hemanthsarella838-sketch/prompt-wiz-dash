@@ -210,7 +210,10 @@ function Index() {
             </button>
             <button
               onClick={() =>
-                setInput(SAMPLE_PROMPTS[Math.floor(Math.random() * SAMPLE_PROMPTS.length)])
+                setInput(
+                  SAMPLE_PROMPTS[Math.floor(Math.random() * SAMPLE_PROMPTS.length)] ??
+                    SAMPLE_PROMPTS[0]!,
+                )
               }
               className="btn-ghost"
             >
